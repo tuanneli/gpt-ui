@@ -1,19 +1,13 @@
 import Main from "../../4.widgets/content/main";
 import Sidebar from "../../4.widgets/content/sidebar";
-import styled from 'styled-components';
-
-const Wrapper = styled.section`
-  width: 100vw;
-  height: 100vh;
-  display: felx;
-`;
+import '../style/home.scss';
 
 const Home = () => {
   return (
-    <Wrapper>
+    <div className='home'>
       <Sidebar />
       <Main />
-    </Wrapper>
+    </div>
   );
 }
 
