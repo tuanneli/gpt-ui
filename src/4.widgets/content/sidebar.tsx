@@ -16,18 +16,18 @@ const Sidebar = () => {
         <AddIcon style={{ marginBottom: '3px' }} />
         New chat
       </button>
-      <div className='sidebar_main'>
+      <div className='sidebar_body'>
         {chats.map(chat => {
           return (
-            <div>{chat}</div>
+            <div className='sidebar_item'>{chat}</div>
           )
         })}
       </div>
       <div className='sidebar_bottom'>
-        <div className='sidebar_bottom_item'>
+        <div className='sidebar_item'>
           Update to Plus
         </div>
-        <div className='sidebar_bottom_item'>
+        <div className='sidebar_item'>
           User
         </div>
       </div>

@@ -1,5 +1,5 @@
 .sidebar {
-  width: 260px;
+  min-width: 260px;
   height: 100vh;
   padding: 8px;
   border-color: hsla(0, 0%, 100%, .2);
@@ -7,8 +7,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-sizing: border-box;
 
-  &_main {
+  &_body {
     height: 100%;
     overflow: auto;
   }
@@ -16,6 +17,7 @@
   &_bottom {
     height: 97px;
     border-top: 1px solid hsla(0, 0%, 100%, .2);
+    margin-top: 0.25rem;
     padding-top: 0.5rem;
 
     &_item {
@@ -27,6 +29,17 @@
       &:hover {
         background-color: rgba(118, 143, 189, 0.2);
       }
+    }
+  }
+
+  &_item {
+    padding: 12px;
+    cursor: pointer;
+    transition-duration: .2s;
+    border-radius: 0.375rem;
+
+    &:hover {
+      background-color: rgba(118, 143, 189, 0.2);
     }
   }
 }
@@ -57,16 +70,13 @@
 
 ::-webkit-scrollbar {
   cursor: pointer;
-  background-color: transparent;
   width: 8px;
+  background-color: rgba(194, 192, 192, 0.126);
+  border-radius: 100vw;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: transparent;
   border-radius: 10px;
   transition: background-color .5s ease-in-out;
-
-  &:hover {
-    background-color: rgb(194, 192, 192);
-  }
+  background-color: rgb(194, 192, 192);
 }
